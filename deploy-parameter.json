@@ -4,10 +4,10 @@
   "parameters": {
     "location": {
       "value": "eastus"
-    }
+    },
     "adminUsername" :{
       "value": "HOPE"
-    }
+    },
     "adminpassword" {
       "value":"Bangbang2014.."
     }
