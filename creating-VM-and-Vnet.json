@@ -53,14 +53,14 @@
       "apiVersion": "2023-04-01",
       "name": "nic-frontend",
       "location": "[parameters('location')]",
-      "dependsOn": ["Microsoft.Network/virtualNetworks/vnet-lab1"],
+      "dependsOn": ["Microsoft.Network/virtualNetworks/vnet1"],
       "properties": {
         "ipConfigurations": [
           {
             "name": "ipconfig1",
             "properties": {
               "subnet": {
-                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', 'vnet-lab1', 'frontend-subnet')]"
+                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', 'vnet1', 'frontend-subnet')]"
               },
               "privateIPAllocationMethod": "Dynamic"
             }
@@ -73,14 +73,14 @@
       "apiVersion": "2023-04-01",
       "name": "nic-backend",
       "location": "[parameters('location')]",
-      "dependsOn": ["Microsoft.Network/virtualNetworks/vnet-lab1"],
+      "dependsOn": ["Microsoft.Network/virtualNetworks/vnet1"],
       "properties": {
         "ipConfigurations": [
           {
             "name": "ipconfig1",
             "properties": {
               "subnet": {
-                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', 'vnet-lab1', 'backend-subnet')]"
+                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', 'vnet1', 'backend-subnet')]"
               },
               "privateIPAllocationMethod": "Dynamic"
             }
