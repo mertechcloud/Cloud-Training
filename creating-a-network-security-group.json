@@ -21,15 +21,10 @@
       "type": "Microsoft.Network/networkSecurityGroups",
       "name": "[parameters('nsgname')]",
       "location": "[parameters('location')]",
-      "tags": {}
-      {
-  "type": "Microsoft.Network/networkSecurityGroups",
-  "apiVersion": "2022-09-01",
-  "name": "nsg-ssh-only",
-  "location": "[parameters('location')]",
-  "properties": {
-    "securityRules": [
-      {
+      "tags": {},
+      "properties": {
+        "securityRules" : [
+          {
         "name": "Allow-SSH",
         "properties": {
           "priority": 100,
@@ -53,9 +48,10 @@
           "destinationPortRange": "*",
           "sourceAddressPrefix": "*",
           "destinationAddressPrefix": "*"
+            }
           }
-        }
-      ]
+        ]
+      }
     }
   ]
-
+}
