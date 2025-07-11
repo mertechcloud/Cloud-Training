@@ -3,13 +3,13 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "NSG-name" : {
-        "type" : "string"
+        "type" : "string",
         "metadata" : {
           "Description" : "This is the name of the Network security group"
           }
         },
       "location" : {
-        "type" : "string"
+        "type" : "string",
         "metadata": {
           "Description": "this is the location where the NSG is deployed"
         }
