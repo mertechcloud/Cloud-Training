@@ -22,6 +22,40 @@
       "name": "[parameters('nsgname')]",
       "location": "[parameters('location')]",
       "tags": {}
+      {
+  "type": "Microsoft.Network/networkSecurityGroups",
+  "apiVersion": "2022-09-01",
+  "name": "nsg-ssh-only",
+  "location": "[parameters('location')]",
+  "properties": {
+    "securityRules": [
+      {
+        "name": "Allow-SSH",
+        "properties": {
+          "priority": 100,
+          "access": "Allow",
+          "direction": "Inbound",
+          "protocol": "Tcp",
+          "sourcePortRange": "*",
+          "destinationPortRange": "22",
+          "sourceAddressPrefix": "*",
+          "destinationAddressPrefix": "*"
+        }
+      },
+      {
+        "name": "Deny-All-Inbound",
+        "properties": {
+          "priority": 200,
+          "access": "Deny",
+          "direction": "Inbound",
+          "protocol": "*",
+          "sourcePortRange": "*",
+          "destinationPortRange": "*",
+          "sourceAddressPrefix": "*",
+          "destinationAddressPrefix": "*"
+          }
+        }
+      ]
     }
   ]
-}
+
