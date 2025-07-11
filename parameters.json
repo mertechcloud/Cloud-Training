@@ -5,11 +5,11 @@
     "location": {
       "value": "eastus"
     },
-    "adminUsername" :{
+    "adminUsername": {
       "value": "HOPE"
     },
-    "adminpassword" {
-      "value":"Bangbang2014.."
+    "adminPassword": {
+      "value": "Bangbang2014.."
     }
   }
 }
