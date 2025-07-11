@@ -15,12 +15,12 @@
         }
       }
     }, 
-  "Resources" : [
+  "resources" : [
     {
       "apiVersion": "2020-05-01",
       "type": "Microsoft.Network/networkSecurityGroups",
-      "name": "[parameter: ('NSGname')]",
-      "location": "[parameter: ('location')]",
+      "name": "[parameters('NSGname')]",
+      "location": "[parameters('location')]",
       "tags": {}
     }
   ]
